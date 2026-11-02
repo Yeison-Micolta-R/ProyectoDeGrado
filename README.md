@@ -1,53 +1,81 @@
-Sistema de Gestión de Bases de Datos Relacionales (SGBDR) con integración de Inteligencia Artificial, diseñado para optimizar la manipulación de datos y la inferencia a partir de imágenes en consultas SQL.
+# UDENARDBMS – Motor de bases de datos con integración de inteligencia artificial
 
-📌 Características
+Proyecto académico desarrollado en Java que consiste en la creación de un motor de bases de datos propio, capaz de interpretar y ejecutar sentencias SQL para gestionar información mediante operaciones CRUD. Además, integra un módulo de inteligencia artificial desarrollado en Python para el reconocimiento y clasificación de imágenes.
 
-Procesamiento de imágenes mediante redes neuronales con TensorFlow.
+## Características principales
 
-Integración con consultas SQL usando JSQLParser.
+- Creación de tablas mediante `CREATE TABLE`.
+- Operaciones SQL: `INSERT`, `SELECT`, `UPDATE` y `DELETE`.
+- Procesamiento de sentencias SQL mediante JSQLParser.
+- Gestión y persistencia de información en archivos.
+- Integración de un módulo de inteligencia artificial para clasificación de imágenes.
+- Comunicación entre los componentes Java y Python mediante sockets TCP.
 
-Soporte para operaciones CRUD con validaciones y reglas definidas.
+## Arquitectura del proyecto
 
-Infraestructura cliente-servidor con sockets para la gestión de consultas.
+El proyecto está organizado en los siguientes componentes:
 
-Interfaz gráfica basada en Java Swing para una experiencia interactiva.
+| Componente | Descripción |
+|---|---|
+| **UDENARDBMS** | Motor encargado de recibir y procesar las sentencias SQL. |
+| **CRUDParser** | Interpreta las consultas y ejecuta las operaciones correspondientes. |
+| **FileManager** | Gestiona la estructura y persistencia de los datos. |
+| **UDENAR_IA** | Componente de inteligencia artificial desarrollado en Python. |
+| **IA** | Gestiona la comunicación entre Java y el servicio de inteligencia artificial. |
+| **UDENARSQL** | Aplicación cliente con interfaz gráfica desarrollada en Java Swing. |
 
-⚙️ Funcionalidades
+## Tecnologías utilizadas
 
-Clasificación de imágenes: Utiliza modelos de redes neuronales convolucionales para el reconocimiento de imágenes.
+- Java
+- Python
+- JSQLParser
+- TensorFlow y Keras
+- OpenCV
+- Java Swing
+- Maven
+- Jupyter Notebook
 
-Manipulación SQL: Permite la ejecución de sentencias SQL con análisis y transformación de consultas.
+## Estructura del proyecto
 
-Manejo de archivos: Almacenamiento y recuperación de datos optimizados mediante archivos binarios.
+```text
+ProyectoDeGrado/
+│
+├── UDENARDBMS/
+│   └── src/main/java/com/mycompany/udenardbms/
+│       ├── UDENARDBMS.java
+│       ├── CRUDParser.java
+│       ├── FileManager.java
+│       └── IA.java
+│
+├── UDENARSQL/
+│   └── src/main/java/com/mycompany/udenarsql/
+│       └── UDENARVIEW.java
+│
+├── UDENAR_IA/
+│
+├── Modelo/
+│   └── entrenamientoPruebaModelo.ipynb
+│
+└── Imagenes-de-funciones-UDENARSQL/
+```
 
-Interfaz gráfica: Proporciona una UI en Java Swing para facilitar la interacción con la base de datos.
+## Mi participación
 
-🚀 Instalación y Uso
+Participé en el desarrollo de los componentes principales del proyecto, enfocándome en:
 
-Requisitos
+- Desarrollo del motor de bases de datos en Java.
+- Procesamiento e interpretación de sentencias SQL.
+- Implementación de operaciones CRUD.
+- Gestión y persistencia de la información.
+- Desarrollo del módulo de inteligencia artificial.
+- Integración y comunicación entre los componentes Java y Python mediante sockets.
 
-Java 8+.
+La interfaz gráfica fue desarrollada por otro integrante del equipo.
 
-Python 3.8+ con TensorFlow y OpenCV.
+## Estado del proyecto
 
-JSQLParser para análisis SQL.
+Proyecto académico desarrollado como trabajo de grado. Algunas funcionalidades de modificación de estructura de tablas se encuentran incompletas.
 
-Pasos de Instalación
+## Reconocimientos
 
-Compila el proyecto en Java
-
-UDENARDBMS y UDENARSQL
-
-Corre el modelo de IA en Python
-
-python UDENAR-IA.py
-
-🛠 Tecnologías Utilizadas
-
-Java: Backend del SGBD e interfaz gráfica.
-
-Python: Procesamiento de imágenes con TensorFlow.
-
-JSQLParser: Análisis y ejecución de sentencias SQL.
-
-Swing: Interfaz gráfica para el usuario.
+Este repositorio corresponde a una contribución derivada del proyecto original desarrollado en equipo: [HaroldAvila24/ProyectoDeGrado](https://github.com/HaroldAvila24/ProyectoDeGrado).
